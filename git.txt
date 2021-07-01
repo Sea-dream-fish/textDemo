@@ -1,0 +1,65 @@
+1、下载和安装git  （Windows）
+    git bash 支持Linux命令的git控制台
+    git CMD  支持Windows命令的控制台
+    git GUI  git可视化界面
+
+    VSCode  安装git 插件
+        快捷键 Ctrl+ ~
+
+2、GitHub 官方注册账号
+
+
+    git操作步骤：
+        1、cd 路径  进入当前目录
+        2、配置git基本操作
+            【注】没有消息就是好消息。
+        
+            git config --global user.name "名字"
+            git config --global user.email "邮箱"
+
+        3、 git init   在本地进行初始
+            .get文件存储当前项目所有版本信息
+        4、 从工作区 => 暂存区
+            git add 文件名
+            git add * 提交所以文件
+
+            git commit -m"这次提交的描述"
+        
+        5、查看是否提交成功，查看当前工作区的状态
+            git status
+        
+        6、从暂存区恢复到工作区
+            git checkout 文件名
+        
+        7、查看哪个文件修改，新增哪些代码？
+            git diff
+        
+        8、clear 清屏操作
+
+        9、查看已经提交过的历史版本
+            git log
+
+        10、恢复文件到指定的某一个版本
+            git reset--hard HEAD^  //退回上一个版本
+            git  reset--hard HEAD^^ //退回两个版本
+            查看 redme.txt是否成功退回
+
+            git reset--hard 版本号
+
+        11、生成ssh密匙
+            ssh-keygen -t rsa -C "GitHub邮箱"
+
+        windows电脑查找文件：我的电脑=>用户=>用户名文件夹=>.ssh(隐藏文件)=> xx.pub(存有秘匙)
+
+        12、githup账户配置密匙
+            settings =>SSH and GPG keys =>new SHH key
+        
+        13、暂存 => githup
+            git remote add origin (仓库地址)
+            git push -u origin master   
+
+            [注]提交过程，可能需要输入用户名和密码
+        
+            第二次提交到GitHub
+                git add * 
+                git push 
